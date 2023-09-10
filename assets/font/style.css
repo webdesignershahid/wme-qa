@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Bahij-TheSansArabic-Bold';
+  src: url('Bahij-TheSansArabic-Bold.woff2') format('woff2'),
+       url('Bahij-TheSansArabic-Bold.woff') format('woff'),
+       url('Bahij-TheSansArabic-Bold.ttf')  format('truetype');
+}
+
+.font-bahij {
+  font-family: 'Bahij-TheSansArabic-Bold', sans-serif;
+}

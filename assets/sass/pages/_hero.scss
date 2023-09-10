@@ -1,0 +1,175 @@
+.hero {
+    padding: 8rem 0;
+    transition: all 1s ease;
+    .container {
+        @media (min-width: 576px) and (max-width: 1199px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+    .center-title {
+        margin-bottom: 2rem;
+        
+        @include md-up {
+            margin-bottom: 5rem;
+        }
+
+        h4 {
+            font-size: 2.5rem;
+            @include md-up {
+                font-size: 3rem;
+            }
+        }
+        h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            @include md-up {
+                font-size: 2.8rem;
+            }
+            @include lg-up {
+                font-size: 3rem;
+            }
+        }
+    }
+    .hero-text {
+        h1 {
+            font-size: 3.5rem;
+            color: var(--color__teal);
+            font-weight: 700;
+            max-width: 60rem;
+            line-height: 1.3;
+            margin: 0 auto;
+            
+            @include md-up {
+                margin: 0;
+                font-size: 3.8rem;
+            }
+            @include lg-up {
+                font-size: 4.2rem;
+            }
+            @include xl-up {
+                font-size: 5rem;
+            }
+            @include xxl-up {
+                font-size: 5.5rem;
+            }
+        }
+        h4 {
+            margin: 1rem 0;
+            color: var(--color__leafGreen);
+            font-size: 3rem;
+            line-height: normal;
+        }
+        p {
+            color: var(--color__leafGreen);
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 1.2;
+            @include xxl-up {
+                font-size: 2.5rem;
+            }
+        }
+        .button {
+
+            a {
+                display: inline-block;
+                background-color: var(--color__green);
+                color: var(--color__white);
+                border-radius: .5rem;
+                padding: 1.2rem 3rem;
+                font-weight: 500;
+                transition: all 0.3s;
+    
+                &:hover {
+                    background-color: var(--color__leafGreen);
+                }
+            }
+        }
+    }
+    .hero-img {
+        margin-bottom: 2rem;
+        @include xl-up {
+            margin-bottom: 0;
+        }
+        img {
+            max-width: 30rem;
+            @include xl-up {
+                max-width: 35rem;
+            }
+
+            @include xxl-up {
+                max-width: 40rem;
+            }
+        }
+    }
+}
+
+.event-sticky-info {
+    background-color: var(--color__green);
+    color: var(--color__white);
+    border-radius: .8rem;
+    @include sm-down {
+        padding: 1rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+    @include lg-down {
+        margin-top: 4rem;
+        padding: 1.5rem 1rem;
+    }
+
+    @include lg-up {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2rem;
+        padding: 0 1rem;
+        z-index: 1024;
+        margin-top: 7rem;
+    }
+    @include xxxl-up {
+        right: 4rem;
+    }
+    ul {
+        @include lg-down {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        li {
+            text-align: center;
+            padding-top: .5rem;
+            @include sm-up {
+                font-size: 3rem;
+            }
+            @include lg-up {
+                padding: 1rem 0;
+            }
+            @include xl-up {
+                padding: 1.5rem 0;
+            }
+            span {
+                font-size: 2rem;
+                margin-bottom: .5rem;
+                display: block;
+
+                @include lg-up {
+                    font-size: 4rem;
+                }
+            }
+            p {
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+            & + li {
+                @include lg-down {
+                    border-left: .2rem solid var(--color__white);
+                }
+                @include lg-up {
+                    border-top: .3rem solid var(--color__white);
+
+                }
+            }
+        }
+    }
+}

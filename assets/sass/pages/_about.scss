@@ -1,0 +1,37 @@
+.about {
+    padding: 1rem 0;
+    overflow: hidden;
+    .container-inner {
+        padding: 6rem 0;
+        @media (min-width: 576px) and (max-width: 1199px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+        
+        @include xl-up {
+            background-color: #F6F6F6;
+            padding: 6rem 6rem;
+            border-radius: .8rem;
+        }
+        @include xxl-up {
+            padding: 6rem 8rem;
+        }
+        @include xxxl-up {
+            padding: 6rem 10rem;
+        }
+
+        .title {
+            margin-bottom: 2rem;
+            font-weight: 700;
+            font-size: 3rem;
+        }
+
+        p {
+            color: #3B3B3B;
+
+            & + p {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

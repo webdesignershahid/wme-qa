@@ -1,0 +1,85 @@
+.workshops {
+    overflow: hidden;
+    padding: 8rem 0;
+
+    .section-title {
+        margin: 0 auto 4rem;
+        @include md-up {
+            max-width: 85%;
+        }
+        @include xxl-up {
+            max-width: 65%;
+        }
+        h1 {
+            color: var(--color__teal);
+            font-size: 2.4rem;
+            font-weight: 700;
+
+            @include sm-up {
+                font-size: 3rem;
+            }
+            @include lg-up {
+                font-size: 3.5rem;
+            }
+            @include xl-up {
+                font-size: 4rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .workshop-item {
+        .thumbnail {
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+
+            img {
+                transition: all .8s ease;
+            }
+        }
+        .details {
+            h3 {
+                margin: 0 0 1rem;                
+                a {
+                    font-weight: 700;
+                    font-size: 2.2rem;
+                    color: var(--color__regalBlue);
+                }
+            }
+            .line {
+                height: .2rem;
+                width: 8rem;
+                background-color: var(--color__yellow);
+                margin: 1.5rem 0;
+            }
+            p {
+                color: var(--color__regalBlue);
+                line-height: 1.45;
+                font-weight: 500;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+            }
+
+            .read-more {
+                margin-top: 1rem;
+                a {
+                    color: var(--color__regalBlue);
+                    font-weight: 600;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: var(--color__yellow);
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .thumbnail img {
+                transform: scale(1.2) rotate(3deg);
+            }
+        }
+    }
+}

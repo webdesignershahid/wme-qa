@@ -1,0 +1,86 @@
+.venu-map {
+    overflow: hidden;
+    margin-bottom: 5rem;
+    @include xl-up {
+        margin-bottom: 2rem;
+    }
+    .content-inner {
+        border-radius: 1rem;
+        @include md-up {
+            background-color: #F9F9F9;
+            padding: 2rem 2rem 2rem 4rem;
+        }
+        @include xl-up {
+            padding: 3rem 3rem 3rem 6rem;
+
+        }
+    }
+    .map {
+        @include md-up {
+            height: 100%;
+        }
+        iframe {
+            height: 30rem;
+            @include md-up {
+                height: 100%;
+                border-radius: 1rem;
+            }
+        }    
+    } 
+    .text-content {
+        margin: 2rem 0;
+
+        @include xl-up {
+            margin: 4rem 0;
+        }
+
+        h5 {
+            color: var(--color__leafGreen);
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            color: var(--color__regalBlue);
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        ul {
+            li {
+                h6 {
+                    color: var(--color__regalBlue);
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+                p {
+                    font-weight: 600;
+                }
+
+                & + li {
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        .button {
+            margin-top: 2rem;
+            @include xl-up {
+                margin-top: 4rem;
+            }
+            a {
+                display: inline-block;
+                background-color: #0C4F1D;
+                color: var(--color__white);
+                border-radius: .5rem;
+                padding: 1.2rem 3rem;
+                font-weight: 600;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: var(--color__leafGreen);
+                }
+            }
+        }
+    }
+}

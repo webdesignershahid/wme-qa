@@ -1,0 +1,52 @@
+.register-cta {
+    margin: 3rem 0;
+    overflow: hidden;
+    .content-inner {
+        border-radius: 1rem;
+        padding: 6rem 3rem;
+        z-index: 1;
+        overflow: hidden;
+        @include sm-up {
+            padding: 8rem 4rem;
+        }
+        @include md-up {
+            padding: 8rem 10rem;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-color: rgba(#0965B0, .75);
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 2.4rem;
+            @include sm-up {
+                font-size: 3rem;
+            }
+            @include lg-up {
+                font-size: 4rem;
+            }
+        }
+        .button {
+            margin-top: 2.4rem;
+            @include lg-up {
+                margin-top: 4rem;
+            }
+            a {
+                display: inline-block;
+                background-color: var(--color__green);
+                color: var(--color__white);
+                border-radius: .5rem;
+                padding: 1.2rem 3rem;
+                font-weight: 500;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: var(--color__leafGreen);
+                }
+            }
+        }
+    }
+}

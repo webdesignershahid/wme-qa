@@ -1,0 +1,32 @@
+.event-guide {
+    position: relative;
+    z-index: 1;
+    padding: 10rem 0;
+    
+    @include lg-up {
+        padding: 15rem 0;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: rgba(#0C4F1D, 0.5);
+    }
+
+    .button {
+        a {
+            display: inline-block;
+            background-color: var(--color__leafGreen);
+            color: var(--color__white);
+            border-radius: .5rem;
+            padding: 1.2rem 3rem;
+            font-weight: 500;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: var(--color__teal);
+            }
+        }
+    }
+}
